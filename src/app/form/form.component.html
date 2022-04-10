@@ -1,5 +1,7 @@
+
 <div class="form">
     <h3>Post your Quote!</h3>
+  
     
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Quote!</label>
@@ -16,30 +18,18 @@
   <button class="btn btn-success btn-lg" (click)="saveToadd()">Add Quote</button>
   <button class="btn btn-primary btn-lg" routerLink="/quote">Post Quote</button>
 
-  <table class="table table-stripped">
+  
+    
+</div>
+<app-quote></app-quote>
+<p>quote works!</p>
+<table class="table table-stripped">
+    <h2>See</h2>
     <tr *ngFor = "let toadd of toadds; let i = index;">
         <th >{{i+1}}</th>
             <td>{{toadd.name}}</td>
             <td (click)="remove(i)">X</td>
     </tr>
   </table>
-    
-</div>
-<!-- <h2 style="text-align: center;">Form</h2>
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col col-lg-2">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]= "newToadd">
-                <button class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2" (click)="saveToadd()">Add</button>
-              </div>
-            <table class="table table-stripped">
-                <tr *ngFor = "let toadd of toadds; let i = index;">
-                    <th >{{i+1}}</th>
-                        <td>{{toadd.name}}</td>
-                        <td (click)="remove(i)">X</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div> -->
+
+

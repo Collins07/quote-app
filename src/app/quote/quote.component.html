@@ -1,6 +1,9 @@
 
-<p>quote works!</p>
-    <p></p>
-    <p></p>
-    <p></p>
-
+<table class="table table-stripped">
+    <tr *ngFor = "let toadd of toadds; let i = index;">
+        <th >{{i+1}}</th>
+            <td>{{toadd.name}}</td>
+            <td (click)="remove(i)">X</td>
+    </tr>
+  </table>
+    

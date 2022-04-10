@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Toadd } from '../Toadd';
 
 
@@ -8,6 +8,7 @@ import { Toadd } from '../Toadd';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  @Input() data: string;
   toadds: Toadd[]=[];
   newToadd: string;
 
@@ -29,6 +30,7 @@ export class FormComponent implements OnInit {
 
 
   constructor() { }
+
 
   ngOnInit(): void {
   }
