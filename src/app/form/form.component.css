@@ -69,7 +69,13 @@ button{
 .votes{
 
     height: 80px;
-    width: 100px;
+    width: 50px;
+    display: inline-flex;
+}
+.votes{
+
+    height: 80px;
+    width: 130px;
     display: inline-flex;
 }
 .remove{
@@ -98,6 +104,5 @@ button{
     border: none;
 }
 #para{
-
     display: inline-flex;
 }

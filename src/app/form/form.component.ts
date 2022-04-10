@@ -24,6 +24,8 @@ export class FormComponent implements OnInit {
   newNumberOfUp: number = 0;
   newNumberOfDown: number = 0;
 
+  myDate= Date.now();
+
   saveToadd(){
     if(this.newToadd){
       let toadd = new Toadd();

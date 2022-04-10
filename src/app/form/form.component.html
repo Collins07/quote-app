@@ -52,6 +52,9 @@
       <p id="last" *ngFor = "let sender of senders">shared by: <i id="italic">{{sender.name}}</i></p>
     
     </div>
+    <div class="votes1" >
+      <p *ngFor = "let toadd of toadds; let i = index;">{{myDate| date: 'hh:mm:ss' }}</p>
+    </div>
     <div class="votes" >
         <div ><p id="para">{{newNumberOfUp}}</p></div>
         <div><button id="bi" *ngFor = "let toadd of toadds; let i = index;"(click)="upButtonClick()"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button></div>
@@ -59,7 +62,8 @@
     <div class="votes" >
       <div ><p id="para">{{newNumberOfDown}}</p></div>
       <div><button id="bi" *ngFor = "let toadd of toadds; let i = index;"(click)="downButtonClick()"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></div>
-  </div>
+    </div>
+    
     
   <div class="remove" >
     <p *ngFor = "let toadd of toadds; let i = index;"  (click)="remove(i)"><i class="fa fa-trash" aria-hidden="true"></i></p>
