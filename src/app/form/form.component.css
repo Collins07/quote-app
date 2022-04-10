@@ -21,3 +21,18 @@ h3{
 button{
     margin-left: 5%;
 }
+#cont{
+    border: 1px solid black;
+    height: 250px;
+    display: inline-flex;
+}
+.first{
+    border: 1px solid green;
+    height: 80px;
+    width: 200px;
+}
+.last{
+    border: 1px solid red;
+    height: 80px;
+    width: 200px;
+}
