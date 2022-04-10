@@ -1,4 +1,4 @@
-
+<app-quote></app-quote>
 <div class="form">
     <h3>Post your Quote!</h3>
   
@@ -13,7 +13,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Sender</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" >
+    <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]= "newSender">
   </div>
   <button class="btn btn-success btn-lg" (click)="saveToadd()">Add Quote</button>
   <button class="btn btn-primary btn-lg" routerLink="/quote">Post Quote</button>
@@ -22,23 +22,24 @@
     
 </div>
 <app-quote></app-quote>
-<p>quote works!</p>
-<table class="table table-stripped">
-    <h2>See</h2>
-    <tr *ngFor = "let toadd of toadds; let i = index;">
-        <th >{{i+1}}</th>
-            <td>{{toadd.name}}</td>
-            <td (click)="remove(i)">X</td>
-    </tr>
-  </table>
   <div class="container" id="cont">
     <div class="first" >
-        <p *ngFor = "let toadd of toadds; let i = index;">{{toadd.name}}</p>
-        
+      <p *ngFor = "let toadd of toadds; let i = index;">{{i+1}}</p>
+    </div>
+    <div class="first" >
+      <p *ngFor = "let toadd of toadds; let i = index;">{{toadd.name}}</p>
+      
     </div>
     <div class="last" >
         <p *ngFor = "let author of authors">{{author.name}}</p>
     </div>
+    <div class="last" >
+      <p *ngFor = "let sender of senders">{{sender.name}}</p>
+      <p *ngFor = "let toadd of toadds; let i = index;"  (click)="remove(i)"></p>
+  </div>
+  <div class="last" >
+    <p *ngFor = "let toadd of toadds; let i = index;"  (click)="remove(i)">X</p>
+</div>
 </div>
 
 

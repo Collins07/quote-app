@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Toadd } from '../Toadd';
 import { Author } from '../Author';
+import { Sender } from '../Sender';
 
 
 @Component({
@@ -16,6 +17,9 @@ export class FormComponent implements OnInit {
   authors: Author[]=[];
   newAuthor: string;
 
+  senders: Sender[]=[];
+  newSender: string;
+
   saveToadd(){
     if(this.newToadd){
       let toadd = new Toadd();
@@ -24,7 +28,7 @@ export class FormComponent implements OnInit {
       this.toadds.push(toadd);
       this.newToadd = "";
     }else{
-      alert("please add quote")
+      alert("please share quote")
     }
     
 
@@ -35,13 +39,24 @@ export class FormComponent implements OnInit {
       this.authors.push(author);
       this.newAuthor = "";
     }else{
-      alert("please add quote")
+      alert("please name of Author")
+    }
+
+    if(this.newSender){
+      let sender = new Sender();
+      sender.name = this.newSender;
+      sender.isCompleted = true;
+      this.senders.push(sender);
+      this.newSender = "";
+    }else{
+      alert("please enter your name")
     }
   }
 
   remove(id:number){
     this.authors = this.authors.filter((v,i)=>i !==id);
     this.toadds = this.toadds.filter((v,i)=>i !==id);
+    this.senders = this.senders.filter((v,i)=>i !==id);
   }
 
 
