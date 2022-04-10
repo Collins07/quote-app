@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Toadd } from '../Toadd';
 import { Author } from '../Author';
 import { Sender } from '../Sender';
+
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Sender } from '../Sender';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  @Input() data: string;
+ 
   toadds: Toadd[]=[];
   newToadd: string;
 
@@ -19,6 +20,9 @@ export class FormComponent implements OnInit {
 
   senders: Sender[]=[];
   newSender: string;
+
+  newNumberOfUp: number = 0;
+  newNumberOfDown: number = 0;
 
   saveToadd(){
     if(this.newToadd){
@@ -57,6 +61,13 @@ export class FormComponent implements OnInit {
     this.authors = this.authors.filter((v,i)=>i !==id);
     this.toadds = this.toadds.filter((v,i)=>i !==id);
     this.senders = this.senders.filter((v,i)=>i !==id);
+  }
+
+  upButtonClick(){
+   this.newNumberOfUp++;
+  }
+  downButtonClick(){
+    this.newNumberOfDown++;
   }
 
 

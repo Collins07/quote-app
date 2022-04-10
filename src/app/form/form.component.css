@@ -29,7 +29,7 @@ button{
 .first{
     border: 1px solid green;
     height: 80px;
-    width: 550px;
+    width: 500px;
 }
 #first{
     color: rgb(117, 34, 34);
@@ -58,7 +58,8 @@ button{
 .votes{
     border: 1px solid green;
     height: 80px;
-    width: 150px;
+    width: 100px;
+    display: inline-flex;
 }
 .remove{
     border: 1px solid red;
@@ -72,4 +73,12 @@ button{
 .fa-quote-right, .fa-quote-left{
     font-size: 12px;
     color: black;
+}
+#bi{
+    border: 1px solid blue;
+    margin-top: 5%;
+}
+#para{
+    border: 1px solid rgb(11, 185, 5);
+    display: inline-flex;
 }
