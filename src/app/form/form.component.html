@@ -1,45 +1,52 @@
 <app-quote></app-quote>
+
 <div class="form">
     <h3>Post your Quote!</h3>
   
     
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Quote!</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]= "newToadd"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]= "newToadd" required></textarea>
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Author</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]= "newAuthor">
+        <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]= "newAuthor" required>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Sender</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]= "newSender">
+        <label for="exampleFormControlInput1" class="form-label">Sender</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]= "newSender" required>
   </div>
-  <button class="btn btn-success btn-lg" (click)="saveToadd()">Add Quote</button>
+  <button type="button" class="btn btn-success btn-lg" (click)="saveToadd()">Add Quote</button>
   <button class="btn btn-primary btn-lg" routerLink="/quote">Post Quote</button>
 
   
     
 </div>
-<app-quote></app-quote>
-  <div class="container" id="cont">
-    <div class="first" >
-      <p *ngFor = "let toadd of toadds; let i = index;">{{i+1}}</p>
+
+
+
+
+  <div class="container-fluid" id="cont">
+    <div class="number" >
+      <p id="number" *ngFor = "let toadd of toadds; let i = index;">({{i+1}}).</p>
     </div>
     <div class="first" >
-      <p *ngFor = "let toadd of toadds; let i = index;">{{toadd.name}}</p>
+      <p id="first" *ngFor = "let toadd of toadds; let i = index;"><i class="fa fa-quote-left" aria-hidden="true"></i><i>     {{toadd.name}}      </i>  <i class="fa fa-quote-right" aria-hidden="true"></i></p>
       
     </div>
     <div class="last" >
-        <p *ngFor = "let author of authors">{{author.name}}</p>
+        <p id="last" *ngFor = "let author of authors">by: <i id="italic">{{author.name}}</i></p>
     </div>
     <div class="last" >
-      <p *ngFor = "let sender of senders">{{sender.name}}</p>
-      <p *ngFor = "let toadd of toadds; let i = index;"  (click)="remove(i)"></p>
+      <p id="last" *ngFor = "let sender of senders">shared by: <i id="italic">{{sender.name}}</i></p>
+    
+    </div>
+    <div class="votes" >
+      
+    </div>
+  <div class="remove" >
+    <p *ngFor = "let toadd of toadds; let i = index;"  (click)="remove(i)"><i class="fa fa-trash" aria-hidden="true"></i></p>
   </div>
-  <div class="last" >
-    <p *ngFor = "let toadd of toadds; let i = index;"  (click)="remove(i)">X</p>
-</div>
 </div>
 
 

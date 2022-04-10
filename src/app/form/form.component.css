@@ -29,10 +29,47 @@ button{
 .first{
     border: 1px solid green;
     height: 80px;
-    width: 200px;
+    width: 550px;
+}
+#first{
+    color: rgb(117, 34, 34);
+    text-align: center;
 }
 .last{
     border: 1px solid red;
     height: 80px;
     width: 200px;
+}
+#last{
+ 
+    font-family: Arial, Helvetica, sans-serif;
+}
+#italic{
+    font-weight: bold;
+}
+.number{
+    border: 1px solid red;
+    height: 80px;
+    width: 20px;
+}
+#number{
+    font-weight: bold;
+}
+.votes{
+    border: 1px solid green;
+    height: 80px;
+    width: 150px;
+}
+.remove{
+    border: 1px solid red;
+    height: 80px;
+    width: 20px;
+}
+.fa-trash{
+    color: red;
+    font-size: 30px;
+}
+.fa-quote-right, .fa-quote-left{
+    font-size: 12px;
+    color: black;
 }
