@@ -1,4 +1,14 @@
 <app-quote></app-quote>
+<div>
+  <h5>Welcome to Quote App!</h5>
+  <p>Quote App is an inspirational platform that allows a user to share quotes with their authors. <br>
+   On this platform you can also read other quotes shared by other users and can upvote <br> them by
+  clicking on the <i class="fa fa-thumbs-up" aria-hidden="true"></i> or  <br> downvote them by 
+   clicking on <i class="fa fa-thumbs-down" aria-hidden="true"></i> icon</p>
+
+   <p>On the form below enter the quote you'd like to share, the author and your name then click on <br>
+     the "Add quote" button to share it on Quote App </p>
+</div>
 
 <div class="form">
     <h3>Post your Quote!</h3>
@@ -43,11 +53,11 @@
     </div>
     <div class="votes" >
         <div ><p id="para">{{newNumberOfUp}}</p></div>
-        <div><button id="bi" *ngFor = "let toadd of toadds; let i = index;"(click)="upButtonClick()">Up</button></div>
+        <div><button id="bi" *ngFor = "let toadd of toadds; let i = index;"(click)="upButtonClick()"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button></div>
     </div>
     <div class="votes" >
       <div ><p id="para">{{newNumberOfDown}}</p></div>
-      <div><button id="bi" *ngFor = "let toadd of toadds; let i = index;"(click)="downButtonClick()">Down</button></div>
+      <div><button id="bi" *ngFor = "let toadd of toadds; let i = index;"(click)="downButtonClick()"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button></div>
   </div>
     
   <div class="remove" >
